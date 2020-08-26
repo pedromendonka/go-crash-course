@@ -11,7 +11,8 @@ func index(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 	fmt.Println("WEB")
-
+	port := ":3000"
 	http.HandleFunc("/", index)
-	http.ListenAndServe(":3000", nil)
+	fmt.Println("Server running on port", port)
+	http.ListenAndServe(port, nil)
 }
